@@ -75,22 +75,24 @@
        ============================================================================ -->
   <style>
     :root {
-      /* 🎨 核心配色盤 (換案子想改主題色調，只改這幾行) */
-      --bg: #08040f;                    /* 網頁極致深黑基底 */
-      --panel: rgba(22, 12, 40, 0.85);   /* 半透明磨砂玻璃卡片底色 */
-      --panel-solid: #160c28;             /* 不透明卡片底色 (遊戲卡等) */
-      --pink: #ff1b8d;                   /* 主亮色：賽博霓虹粉 */
-      --magenta: #ff3df0;                /* 強調色：電光洋紅 */
-      --violet: #a64dff;                 /* 輔助色：流光紫 */
-      --purple: #7b2fff;                 /* 按鈕漸層紫 */
-      --gold: #ffc700;                   /* 金幣/重點高亮黃 */
-      --text: #f4ecff;                   /* 主要文字亮白色 */
-      --muted: #a294c2;                  /* 次要說明文字暗紫色 */
-      --line: rgba(166, 77, 255, 0.22);  /* 科技邊框發光細線 */
+      /* 🎨 MATE369 專屬：極光矩陣與帝王金 (Cyber Emerald & Gold) */
+      --bg: #031c10;                    /* 網頁極致深墨綠底 (接近純黑但透出深綠質感) */
+      --panel: rgba(4, 40, 24, 0.82);   /* 磨砂玻璃卡片底色 (深翠綠帶通透感) */
+      --panel-solid: #052d1a;           /* 實心卡片底色 (遊戲卡背景) */
       
-      /* 📐 尺寸調節器 (LOGO 與元件微調) */
-      --logo-height-pc: 42px;            /* 電腦端 LOGO 高度 */
-      --logo-height-mobile: 32px;        /* 手機端 LOGO 高度 */
+      --pink: #ffc700;                  /* 原主亮色 ➔ 替換為 MATE369 皇冠金 */
+      --magenta: #00ff88;               /* 原強調色 ➔ 替換為 賽博極光電光綠 */
+      --violet: #25d366;                /* 原輔助色 ➔ 替換為 霓虹翠綠 */
+      --purple: #008f4c;                /* 原漸層紫 ➔ 替換為 科技深綠 */
+      --gold: #ffe066;                  /* 亮金黃 (按鈕反光高亮) */
+      
+      --text: #f0fff6;                  /* 主要文字：微帶薄荷綠的清爽白 */
+      --muted: #83b89b;                 /* 次要文字：沉穩灰綠色 */
+      --line: rgba(0, 255, 136, 0.22);  /* 邊框發光線：微透電光綠 */
+      
+      /* 📐 尺寸調節器 */
+      --logo-height-pc: 42px;
+      --logo-height-mobile: 32px;
     }
 
     /* 基礎重置 */
@@ -131,7 +133,8 @@
     #cursor-glow {
       position: fixed; width: 450px; height: 450px; border-radius: 50%;
       pointer-events: none; z-index: 1;
-      background: radial-gradient(circle, rgba(255,27,141,0.18), transparent 65%);
+      /* 換成極光綠與微金光的混合暈染 */
+      background: radial-gradient(circle, rgba(0, 255, 136, 0.15), rgba(255, 199, 0, 0.08), transparent 65%);
       transform: translate(-50%, -50%);
       transition: opacity 0.3s;
     }
@@ -233,8 +236,9 @@
     h1 .l1 { display: block; color: #fff; }
     h1 .l2 {
       display: block;
-      background: linear-gradient(90deg, var(--magenta), var(--violet), var(--pink));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background: linear-gradient(90deg, #00ff88, #25d366, #ffc700);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     .sub { max-width: 680px; margin: 8px auto 0; color: var(--text); font-size: 1rem; font-weight: 500; line-height: 1.45; }
     .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
