@@ -108,7 +108,7 @@
     .bg-city {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
       /******************* 抓取同目錄 hero.jpg，固定滾動 (視差效果)，若無圖顯示暗底 ************************/
-      background: url('hero.jpg') center top / cover no-repeat fixed;
+      background: url('view.webp') center top / cover no-repeat fixed;
       background-color: var(--bg);
       opacity: 0.35;
     }
@@ -441,7 +441,7 @@
         <!-- 💡 LOGO 替換說明：
              1. 丟入 logo.png (尺寸不拘，已設定等比縮放)
              2. 若圖片遺失，onerror 自動切換為後方科技文字「MATE369」避免破版 -->
-        <img src="logo.png" alt="Brand Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <img src="logo.webp" alt="Brand Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         <span class="logo-fallback"><span class="dot"></span><span>MATE369</span></span>
       </a>
 
@@ -483,11 +483,15 @@
         <div class="carousel-track" id="carouselTrack">
           <!-- Banner 1 -->
           <div class="carousel-slide track-outbound">
-            <img src="banner1.jpg" alt="Promotion 1" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1600\' height=\'700\' style=\'background:%23160c28\'><text x=\'50%\' y=\'50%\' fill=\'%23ff1b8d\' font-size=\'40\' font-family=\'sans-serif\' text-anchor=\'middle\'>BANNER 1 (1600x700 點擊更換)</text></svg>'">
+            <img src="b1.webp" alt="Promotion 1" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1600\' height=\'700\' style=\'background:%23160c28\'><text x=\'50%\' y=\'50%\' fill=\'%23ff1b8d\' font-size=\'40\' font-family=\'sans-serif\' text-anchor=\'middle\'>BANNER 1 (1600x700 點擊更換)</text></svg>'">
           </div>
           <!-- Banner 2 -->
           <div class="carousel-slide track-outbound">
-            <img src="banner2.jpg" alt="Promotion 2" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1600\' height=\'700\' style=\'background:%230d0718\'><text x=\'50%\' y=\'50%\' fill=\'%23a64dff\' font-size=\'40\' font-family=\'sans-serif\' text-anchor=\'middle\'>BANNER 2 (1600x700 點擊更換)</text></svg>'">
+            <img src="b2.webp" alt="Promotion 2" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1600\' height=\'700\' style=\'background:%230d0718\'><text x=\'50%\' y=\'50%\' fill=\'%23a64dff\' font-size=\'40\' font-family=\'sans-serif\' text-anchor=\'middle\'>BANNER 2 (1600x700 點擊更換)</text></svg>'">
+          </div>
+          <!-- Banner 3 -->
+          <div class="carousel-slide track-outbound">
+            <img src="b3.webp" alt="Promotion 3" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'1600\' height=\'700\' style=\'background:%230d0718\'><text x=\'50%\' y=\'50%\' fill=\'%23a64dff\' font-size=\'40\' font-family=\'sans-serif\' text-anchor=\'middle\'>BANNER 2 (1600x700 點擊更換)</text></svg>'">
           </div>
           <!-- 💡 若要增加第 3 張 Banner，取消下方註解即可：
           <div class="carousel-slide track-outbound">
@@ -566,11 +570,11 @@
         <!-- 機台卡 1 -->
         <a class="game track-outbound" href="javascript:void(0);">
           <div class="cover">
-            <img src="game1.jpg" alt="Rockin Joker" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="glyph">RJ</div>
+            <img src="bng.webp" alt="BNG SLOT" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="glyph">BNG</div>
           </div>
           <div class="game-body">
-            <div class="info"><h3>Rockin Joker</h3><div class="genre">HOLD & WIN</div></div>
+            <div class="info"><h3>BNG SLOT</h3><div class="genre">HOLD & WIN</div></div>
             <div class="play" data-en="PLAY ›" data-zh="開玩 ›">PLAY ›</div>
           </div>
         </a>
@@ -578,11 +582,11 @@
         <!-- 機台卡 2 -->
         <a class="game track-outbound" href="javascript:void(0);">
           <div class="cover">
-            <img src="game2.jpg" alt="Fortune Gems" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="glyph">FG</div>
+            <img src="pp.webp" alt="Pragmatic Play" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="glyph">PP</div>
           </div>
           <div class="game-body">
-            <div class="info"><h3>Fortune Gems 2</h3><div class="genre">EXTRA BET</div></div>
+            <div class="info"><h3>Pragmatic Play</h3><div class="genre">BEST SLOT</div></div>
             <div class="play" data-en="PLAY ›" data-zh="開玩 ›">PLAY ›</div>
           </div>
         </a>
@@ -590,11 +594,35 @@
         <!-- 機台卡 3 -->
         <a class="game track-outbound" href="javascript:void(0);">
           <div class="cover">
-            <img src="game3.jpg" alt="Gates of Olympus" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="glyph">GO</div>
+            <img src="pg.webp" alt="PG SLOT" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="glyph">PG</div>
           </div>
           <div class="game-body">
-            <div class="info"><h3>Gates of Olympus</h3><div class="genre">TUMBLE FEATURE</div></div>
+            <div class="info"><h3>PG SLOT</h3><div class="genre">TUMBLE FEATURE</div></div>
+            <div class="play" data-en="PLAY ›" data-zh="開玩 ›">PLAY ›</div>
+          </div>
+        </a>
+
+        <!-- 機台卡 4 -->
+        <a class="game track-outbound" href="javascript:void(0);">
+          <div class="cover">
+            <img src="sports.webp" alt="SBO SPORT" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="glyph">SBO</div>
+          </div>
+          <div class="game-body">
+            <div class="info"><h3>SBO SPORT</h3><div class="genre">AFL&NRL</div></div>
+            <div class="play" data-en="PLAY ›" data-zh="開玩 ›">PLAY ›</div>
+          </div>
+        </a>
+
+        <!-- 機台卡 5 -->
+        <a class="game track-outbound" href="javascript:void(0);">
+          <div class="cover">
+            <img src="casino.webp" alt="MT CASINO" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="glyph">MT LIVE</div>
+          </div>
+          <div class="game-body">
+            <div class="info"><h3>MT CASINO</h3><div class="genre">REAL LIVE</div></div>
             <div class="play" data-en="PLAY ›" data-zh="開玩 ›">PLAY ›</div>
           </div>
         </a>
