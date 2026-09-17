@@ -110,12 +110,12 @@
       /******************* 抓取同目錄 hero.jpg，固定滾動 (視差效果)，若無圖顯示暗底 ************************/
       background: url('view.webp') center top / cover no-repeat fixed;
       background-color: var(--bg);
-      opacity: 0.35;
+      opacity: 0.85;
     }
     .bg-overlay {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
       /* 上方微透露出城市輪廓，往下加深保證文字極度清晰 */
-      background: linear-gradient(180deg, rgba(8,4,15,0.4) 0%, rgba(8,4,15,0.85) 60%, var(--bg) 100%);
+      background: linear-gradient(180deg, rgba(8,4,15,0.15) 0%, rgba(8,4,15,0.45) 60%, rgba(8,4,15,0.7) 100%);
     }
     .grid-bg {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
