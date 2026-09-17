@@ -39,7 +39,7 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     
     // 👇👇👇【修改點 1】正式投放時替換為客戶的像素 ID；若不發射維持全 0 👇👇👇
-    const ACTIVE_PIXEL_ID = "1763413831334085"; 
+    const ACTIVE_PIXEL_ID = "000000000000000"; 
     if (ACTIVE_PIXEL_ID && ACTIVE_PIXEL_ID !== "000000000000000") {
       fbq('init', ACTIVE_PIXEL_ID);
       fbq('track', 'PageView');
@@ -50,7 +50,7 @@
        【區塊 2】SEO 結構與澳洲經緯度定位 (換案子改品牌名)
        ============================================================================ -->
   <!-- 👇👇👇【修改點 2】網頁標題與描述 👇👇👇 -->
-  <title>MATE369 | Australia's Best Online Pokies & Casino Portal</title>
+  <title>MATE369|Australia's Best Online Pokies & Casino Portal</title>
   <meta name="description" content="Discover Australia's Best Online Pokies at MATE369. Play certified games, enjoy Deposit $20 Get $70, VIP rewards and 24/7 fast local payouts.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   
@@ -107,7 +107,7 @@
     /* 🏙️ 背景特效層：城市底圖 + 漸變遮罩 + 矩陣網格 + 掃描線 */
     .bg-city {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      /* 抓取同目錄 hero.jpg，固定滾動 (視差效果)，若無圖顯示暗底 */
+      /******************* 抓取同目錄 hero.jpg，固定滾動 (視差效果)，若無圖顯示暗底 ************************/
       background: url('hero.jpg') center top / cover no-repeat fixed;
       background-color: var(--bg);
       opacity: 0.35;
