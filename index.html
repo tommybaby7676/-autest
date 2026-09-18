@@ -205,33 +205,48 @@
       box-shadow: 0 0 30px rgba(255,27,141,0.4); margin: 0 auto;
     }
 
-    /* 🎠 頂部輪播 BANNER (比例鎖定 + 內容自適應包含，徹底解決爆版) */
+    /* 🎠 真正純自適應 Banner：依據上傳的圖片自然撐開，絕無黑邊、絕不裁切 */
     .carousel-container {
-      position: relative; max-width: 980px; margin: 16px auto 14px;
-      aspect-ratio: 16 / 7; /* PC 端黃金比例 */
-      border: 1px solid var(--line); background: #02120a;
-      overflow: hidden; touch-action: pan-y;
+      position: relative;
+      width: 100%;
+      max-width: 980px;
+      margin: 16px auto 14px;
+      border: 1px solid var(--line);
+      background: transparent;
+      overflow: hidden;
+      touch-action: pan-y;
       clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);
     }
     .carousel-track {
-      display: flex; width: 100%; height: 100%;
+      display: flex;
+      width: 100%;
       transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
       cursor: grab;
     }
-    .carousel-track.is-dragging { transition: none !important; cursor: grabbing; }
+    .carousel-track.is-dragging {
+      transition: none !important;
+      cursor: grabbing;
+    }
     .carousel-slide {
-      min-width: 100%; height: 100%; flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      background: #02120a; user-select: none;
+      min-width: 100%;
+      width: 100%;
+      flex-shrink: 0;
+      user-select: none;
     }
     .carousel-slide img {
-      width: 100%; height: 100%;
-      object-fit: contain; /* 圖片完整放入不裁切 */
-      display: block; pointer-events: none;
+      width: 100%;
+      height: auto;           /* 👈 高度由圖片真實比例自然撐開，寬度 100% 貼齊 */
+      display: block;
+      pointer-events: none;
     }
     .carousel-dots {
-      position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%);
-      display: flex; gap: 6px; z-index: 5;
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+      z-index: 5;
     }
     .carousel-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.3); cursor: pointer; transition: 0.2s; }
     .carousel-dot.active { background: var(--magenta); box-shadow: 0 0 8px var(--magenta); width: 22px; border-radius: 4px; }
@@ -416,9 +431,7 @@
       .nav-links a:not(.btn) { display: none; }
       .logo-img { height: var(--logo-height-mobile); }
       #cursor-glow { display: none; }
-      
-      /* 手機端 Banner 比例鎖定為 16:9，安全不破版 */
-      .carousel-container { aspect-ratio: 16 / 9; margin: 10px auto; }
+     
 
       header { padding: 4px 0 16px; }
       h1 { font-size: 2.1rem; }
