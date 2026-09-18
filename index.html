@@ -344,6 +344,11 @@
     h2 { font-family: "Chakra Petch", "Noto Sans SC"; font-weight: 700; font-style: italic; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.08; }
     h2 em { font-style: italic; color: var(--magenta); }
     .sec-head { margin-bottom: 24px; max-width: 680px; }
+    #about .sec-head { max-width: 960px; }
+    .pc-br { display: inline; }
+    @media (max-width: 768px) {
+    .pc-br { display: none; }
+    }
 
     /* 遊戲網格 */
     .games { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -871,7 +876,7 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="eyebrow" data-en="ABOUT OUR PLATFORM" data-zh="關於平台">ABOUT OUR PLATFORM</div>
-      <h2 data-en="AUSTRALIA'S PREMIER <em>ONLINE POKIES & REAL MONEY CASINO DESTINATION</em>" data-zh="值得信賴的 <em>澳洲線上娛樂城與真錢老虎機旗艦</em>">AUSTRALIA'S PREMIER <em>ONLINE POKIES & REAL MONEY CASINO DESTINATION</em></h2>
+      <h2 data-en="AUSTRALIA'S PREMIER ONLINE POKIES<br class='pc-br'> & REAL MONEY CASINO DESTINATION" data-zh="值得信賴的澳洲線上娛樂城<br class='pc-br'> <em>與真錢老虎機旗艦</em>">AUSTRALIA'S PREMIER ONLINE POKIES<br class="pc-br"> <em>& REAL MONEY CASINO DESTINATION</em></h2>
     </div>
 
     <div class="prose reveal">
