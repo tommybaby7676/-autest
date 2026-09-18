@@ -71,7 +71,6 @@
 
   <!-- 🔖 瀏覽器分頁小圖示更換位置：可放 favicon.ico 或改成 logo.webp -->
   <link rel="icon" href="logo.ico" type="image/x-icon">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23032414' stroke='%23ffc700' stroke-width='2'/><circle cx='16' cy='16' r='9' fill='none' stroke='%2300ff88' stroke-width='1.5' stroke-dasharray='3 2'/><text x='16' y='21' font-size='14' font-weight='900' fill='%23ffc700' text-anchor='middle' font-family='sans-serif'>M</text></svg>" type="image/svg+xml">
 
   <!-- ============================================================================
        【區塊 3】GOOGLE 科技電競字體引入
@@ -189,10 +188,13 @@
       transition: 0.22s;
     }
     .btn-primary {
-      background: linear-gradient(120deg, #ff1b8d, #a64dff);
-      color: #ffffff !important; font-weight: 700;
-      box-shadow: 0 0 22px rgba(255,27,141,0.5);
-      padding: 12px 24px; font-size: 0.95rem;
+       /* 換成讀取變數，只要改 :root 這裡就會跟著連動變色 */
+       background: linear-gradient(120deg, var(--pink), var(--purple));
+       color: #032414 !important; /* 你的 --pink 是亮黃色(#FFF01B)，搭配深墨綠字才看得清楚 */
+       font-weight: 900;
+       box-shadow: 0 0 22px rgba(255, 240, 27, 0.45);
+       padding: 12px 24px;
+       font-size: 0.95rem;
     }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 32px rgba(255,27,141,0.85); }
     .btn-ghost {
