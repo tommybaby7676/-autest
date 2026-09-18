@@ -203,11 +203,31 @@
       border: 1px solid var(--magenta); padding: 11px 22px; font-size: 0.95rem;
     }
     .btn-ghost:hover { background: rgba(0,255,136,0.2); }
+    /* 🫁 專屬於這兩顆大按鈕的呼吸動態 */
     .btn-large {
-      width: 100%; max-width: 440px; padding: 16px 32px; font-size: 1.15rem;
-      box-shadow: 0 0 30px rgba(255,27,141,0.4); margin: 0 auto;
+      width: 100%;
+      max-width: 440px;
+      padding: 16px 32px;
+      font-size: 1.15rem;
+      margin: 0 auto;
+      /* 呼吸動畫：2 秒一次循環，平滑縮放與光暈交替 */
+      animation: btnPulse 2s ease-in-out infinite;
     }
 
+    @keyframes btnPulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 16px rgba(0, 255, 136, 0.35);
+      }
+      50% {
+        transform: scale(1.03); /* 微幅膨脹 3% */
+        box-shadow: 0 0 32px rgba(0, 255, 136, 0.8), 0 0 45px rgba(255, 240, 27, 0.3); /* 光暈亮起擴散 */
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 16px rgba(0, 255, 136, 0.35);
+      }
+    }
     /* 🎠 真正純自適應 Banner：依據上傳的圖片自然撐開，絕無黑邊、絕不裁切 */
     .carousel-container {
       position: relative;
