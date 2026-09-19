@@ -597,12 +597,24 @@
       <div class="marquee-container">
         <div class="marquee-inner">
           <div class="marquee-group">
-            <span>Australia's Best Pokies <i>◆</i> Instant $70 Welcome Bonus <i>◆</i> VIP Rewards <i>◆</i> 24/7 Support <i>◆</i> Fast Payouts <i>◆</i></span>
-            <span>Certified Fair RNG <i>◆</i> Top Slots & Live Tables <i>◆</i> 10-Tier Loyalty Privileges <i>◆</i> Direct AUD Bank Settlement <i>◆</i></span>
+            <span data-en="Australia's Best Pokies <i>◆</i> Instant $70 Welcome Bonus <i>◆</i> VIP Rewards <i>◆</i> 24/7 Support <i>◆</i> Fast Payouts <i>◆</i>" 
+                  data-zh="澳洲最佳老虎機 <i>◆</i> 即刻領取 $70 迎新特惠 <i>◆</i> VIP 專屬禮遇 <i>◆</i> 24/7 全天候客服 <i>◆</i> 極速出款 <i>◆</i>">
+              Australia's Best Pokies <i>◆</i> Instant $70 Welcome Bonus <i>◆</i> VIP Rewards <i>◆</i> 24/7 Support <i>◆</i> Fast Payouts <i>◆</i>
+            </span>
+            <span data-en="Certified Fair RNG <i>◆</i> Top Slots &amp; Live Tables <i>◆</i> 10-Tier Loyalty Privileges <i>◆</i> Direct AUD Bank Settlement <i>◆</i>" 
+                  data-zh="國際認證公平 RNG <i>◆</i> 熱門機台與真人視訊 <i>◆</i> 12 級專屬會員特權 <i>◆</i> 支援 AUD 銀行即時結算 <i>◆</i>">
+              Certified Fair RNG <i>◆</i> Top Slots &amp; Live Tables <i>◆</i> 10-Tier Loyalty Privileges <i>◆</i> Direct AUD Bank Settlement <i>◆</i>
+            </span>
           </div>
           <div class="marquee-group">
-            <span>Australia's Best Pokies <i>◆</i> Instant $70 Welcome Bonus <i>◆</i> VIP Rewards <i>◆</i> 24/7 Support <i>◆</i> Fast Payouts <i>◆</i></span>
-            <span>Certified Fair RNG <i>◆</i> Top Slots & Live Tables <i>◆</i> 10-Tier Loyalty Privileges <i>◆</i> Direct AUD Bank Settlement <i>◆</i></span>
+            <span data-en="Australia's Best Pokies <i>◆</i> Instant $70 Welcome Bonus <i>◆</i> VIP Rewards <i>◆</i> 24/7 Support <i>◆</i> Fast Payouts <i>◆</i>" 
+                  data-zh="澳洲最佳老虎機 <i>◆</i> 即刻領取 $70 迎新特惠 <i>◆</i> VIP 專屬禮遇 <i>◆</i> 24/7 全天候客服 <i>◆</i> 極速出款 <i>◆</i>">
+              Australia's Best Pokies <i>◆</i> Instant $70 Welcome Bonus <i>◆</i> VIP Rewards <i>◆</i> 24/7 Support <i>◆</i> Fast Payouts <i>◆</i>
+            </span>
+            <span data-en="Certified Fair RNG <i>◆</i> Top Slots &amp; Live Tables <i>◆</i> 10-Tier Loyalty Privileges <i>◆</i> Direct AUD Bank Settlement <i>◆</i>" 
+                  data-zh="國際認證公平 RNG <i>◆</i> 熱門機台與真人視訊 <i>◆</i> 12 級專屬會員特權 <i>◆</i> 支援 AUD 銀行即時結算 <i>◆</i>">
+              Certified Fair RNG <i>◆</i> Top Slots &amp; Live Tables <i>◆</i> 10-Tier Loyalty Privileges <i>◆</i> Direct AUD Bank Settlement <i>◆</i>
+            </span>
           </div>
         </div>
       </div>
@@ -1026,29 +1038,23 @@
   <!-- ============================================================================
        【區塊 16】核心動態引擎 (多連結支援 + 參數無損打包 + 150ms 緩衝 + 輪播 + 雙語)
        ============================================================================ -->
+ 
   <script>
     // -------------------------------------------------------------
     // 1. 動態跳轉引擎 (支援個別按鈕自訂 data-href 網址 + 參數繼承)
     // -------------------------------------------------------------
     function getFinalTargetUrl(customUrl) {
-      // 若按鈕有指定 data-href 就走自訂網址，沒寫就走預設的包網註冊線
-      const defaultRegisterUrl = "https://www.mate369.com/Register";
+      const defaultRegisterUrl = "https://www.mate369.com/Register?p=JC";
       const targetBase = (customUrl && customUrl.trim() !== "") ? customUrl.trim() : defaultRegisterUrl;
       
       const targetObj = new URL(targetBase, window.location.origin);
       const currentParams = new URLSearchParams(window.location.search);
-      
-      // 自動繼承廣告進站帶的所有參數 (fbclid, utm 等)
+  
       currentParams.forEach((val, key) => {
-        targetObj.searchParams.set(key, val);
+        if (!targetObj.searchParams.has(key)) {
+          targetObj.searchParams.set(key, val);
+        }
       });
-
-      // 補齊代理代號
-      if (!targetObj.searchParams.has("p")) {
-        targetObj.searchParams.set("p", "JC");
-      }
-      return targetObj.toString();
-    }
 
     // 全站點擊攔截 (只攔截帶有 .track-outbound 的指定按鈕)
     document.addEventListener('click', function(e) {
